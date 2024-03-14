@@ -1,0 +1,12 @@
+@import "../sass/variables";
+@import "../sass/breakpoints";
+
+.nav-content li {
+    list-style: none; 
+    
+  }
+  
+  .nav-content li a {
+    text-decoration: none; 
+    color: $black;
+  }

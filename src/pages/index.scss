@@ -1,0 +1,310 @@
+@import "../sass/variables";
+@import "../sass/breakpoints";
+
+.block-banner {
+  .banner-content {
+    margin-bottom: 100px;
+
+    h1 {
+      max-width: 750px;
+      margin-left: auto;
+      margin-right: auto;
+      text-align: center;
+      margin-bottom: 50px;
+    }
+
+    .sub-head {
+      max-width: 796px;
+      margin-left: auto;
+      margin-right: auto;
+      text-align: center;
+    }
+  }
+
+  .banner-image {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+    @include lg {
+      position: relative;
+
+      .search-box {
+        position: absolute;
+        left: 10%;
+        top: -5%;
+      }
+    }
+
+    @include xl {
+      position: relative;
+
+      .search-box {
+        position: absolute;
+        left: 20%;
+        top: -5%;
+      }
+    }
+  }
+}
+
+.block-benefits {
+  padding-top: 50px;
+
+  @include lg {
+    padding-top: 80px;
+  }
+
+  &__items {
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 29px;
+
+    @include md {
+      margin-top: 40px;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+
+      @include lg {
+        margin-top: 50px;
+      }
+    }
+  }
+}
+
+.block-products {
+  margin-top: 100px;
+
+  @include md {
+    margin-top: 120px;
+  }
+
+  @include lg {
+    margin-top: 140px;
+  }
+
+  @include xl {
+    margin-top: 180px;
+  }
+
+  &__blocktitle {
+    .centerTitle {
+      max-width: 440px;
+      margin-left: auto;
+      margin-right: auto;
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    .hh {
+      max-width: 656px;
+      margin-left: auto;
+      margin-right: auto;
+      text-align: center;
+    }
+  }
+
+  // &__items {
+  //   display: flex;
+  //   justify-content: center;
+  //   align-items: center;
+  //   gap: 20px;
+
+  //   @include md {
+  //     gap: 29px;
+  //   }
+  // }
+}
+
+.block-experience {
+  margin-top: 103px;
+
+  @include md {
+    margin-top: 130px;
+  }
+
+  @include lg {
+    margin-top: 150px;
+  }
+
+  @include xl {
+    margin-top: 180px;
+  }
+
+  .block-material {
+    &__text {
+      margin-top: 16px;
+
+      @include md {
+        margin-top: 30px;
+      }
+
+      @include lg {
+        margin-top: 40px;
+      }
+
+      @include xl {
+        margin-top: 50px;
+      }
+    }
+  }
+
+  .btn-primary {
+    margin-top: 30px;
+    margin-bottom: 30px;
+
+    @include lg {
+      margin-top: 40px;
+      margin-bottom: 40px;
+    }
+
+    @include xl {
+      margin-top: 50px;
+      margin-bottom: 50px;
+    }
+  }
+
+  .block-client {
+    &__project {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      @include md {
+        margin-top: 45px;
+        margin-bottom: 57px;
+        margin-left: 97px;
+      }
+    }
+  }
+}
+
+.block-testimonials {
+  .centerTitle {
+    margin-top: 100px;
+    max-width: 489px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+
+    @include md {
+      margin-top: 120px;
+    }
+
+    @include lg {
+      margin-top: 150px;
+    }
+
+    @include xl {
+      margin-top: 180px;
+    }
+  }
+
+  &__text {
+    max-width: 656px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    margin-top: 18px;
+
+    @include md {
+      margin-top: 22px;
+    }
+
+    @include lg {
+      margin-top: 26px;
+    }
+
+    @include xl {
+      margin-top: 30px;
+    }
+  }
+
+  &__items {
+    margin-top: 30px;
+
+    @include md {
+      margin-top: 36px;
+    }
+
+    @include lg {
+      margin-top: 42px;
+    }
+
+    @include xl {
+      margin-top: 50px;
+    }
+  }
+}
+
+
+.block-articles {
+  margin-top: 100px;
+
+  @include md {
+    margin-top: 120px;
+  }
+
+  @include lg {
+    margin-top: 160px;
+  }
+
+  @include xl {
+    margin-top: 180px;
+  }
+
+  &__text {
+    display: inline-block;
+    margin-top: 16px;
+    margin-bottom: 30px;
+
+    @include md {
+      margin-top: 20px;
+      margin-bottom: 36px;
+    }
+
+    @include lg {
+      margin-top: 24px;
+      margin-bottom: 42px;
+    }
+
+    @include xl {
+      margin-top: 30px;
+      margin-bottom: 50px;
+    }
+  }
+
+  .vase-img {
+    position: relative;
+  }
+
+  .text-in-vase {
+    span {
+      display: inline-block;
+    }
+
+    position: absolute;
+    left: 30px;
+    bottom: 50px;
+  }
+
+  &__items {
+    margin-top: 37px;
+  }
+}
+
+.block-discount {
+  &__content {
+    display: flex;
+    flex-direction: column;
+
+    @include xl {
+      margin-top: 181px;
+      margin-bottom: 86px;
+      flex-direction: row;
+      justify-content: space-between;
+    }
+  }
+}

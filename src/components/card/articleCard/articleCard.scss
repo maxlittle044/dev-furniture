@@ -1,0 +1,140 @@
+@import "../../../sass/breakpoints";
+@import "../../../sass/variables";
+
+.card-article {
+  background-color: $white;
+  max-width: 615px;
+  display: flex;
+
+  &__media {
+    width: 100%;
+    margin-right: 26px;
+
+    img {
+      width: 100%;
+      object-fit: cover;
+      height: 110px;
+
+      @include md {
+        height: 160px;
+      }
+
+      @include lg {
+        height: 210px;
+      }
+
+      @include xl {
+        height: 260px;
+      }
+    }
+  }
+
+  &__content {
+    max-width: 330px;
+
+    .tag {
+      display: inline-block;
+        margin-top: 2px;
+      margin-bottom: 4px;
+      font-size: 12px;
+      line-height: 22px;
+
+      @include md {
+      margin-top: 10px;
+      margin-bottom: 14px;
+        font-size: 14px;
+        list-style: 26px;
+      }
+      @include lg {
+      margin-top: 28px;
+        margin-bottom: 21px;
+        font-size: 18px;
+        line-height: 32px;
+      }
+    }
+
+    .title {
+      font-size: 16px;
+      line-height: 20px;
+      margin-right: 11px;
+
+      @include md {
+      margin-bottom: 14px;
+        font-size: 18px;
+        line-height: 25px;
+      }
+
+      @include lg {
+        font-size: 22px;
+        line-height: 28px;
+      }
+
+      @include xl {
+        font-size: 24px;
+        line-height: 31px;
+      }
+    }
+
+    .sub-title {
+      display: none;
+      font-size: 12px;
+      line-height: 22px;
+
+      @include md {
+        display: none;
+        font-size: 14px;
+        list-style: 26px;
+      }
+      @include xl {
+        margin-bottom: 16px;
+        display: inline-block;
+        font-size: 18px;
+        line-height: 32px;
+      }
+    }
+
+    .writer-details {
+      img {
+        width: 18px;
+        height: 18px;
+        border-radius: 50%;
+        margin-right: 2px;
+        margin-bottom: 4px;
+
+        @include lg {
+          width: 28px;
+          height: 28px;
+        }
+      }
+
+      &__name {
+        font-size: 12px;
+        line-height: 22px;
+        font-weight: 700;
+
+        @include lg {
+          font-size: 14px;
+          line-height: 18px;
+        }
+      }
+
+      &__date {
+        display: none;
+        @include md {
+          display: none;
+        }
+
+        @include lg {
+          line-height: 25px;
+          font-size: 14px;
+        }
+        @include xl {
+          margin-left: 8px;
+          display: inline-block;
+          line-height: 25px;
+          font-size: 14px;
+        }
+      }
+    }
+  }
+}

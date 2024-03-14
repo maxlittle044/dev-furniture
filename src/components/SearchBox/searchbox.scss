@@ -1,0 +1,44 @@
+@import "../../sass/variables";
+@import "../../sass/breakpoints";
+
+
+.search-container{
+    max-width: 810px;
+    background-color: $white;
+    
+    .search-wrap {
+      display: flex;
+      position: relative;
+
+      input {
+        width: 100%;
+        height: 48px;
+        border: none;
+        background-color: $white;
+        border-radius: 4px;
+        padding: 10px 50px 10px 10px;
+        font-size: 14px;
+        line-height: 28px;
+        color: $gray-700;
+    
+        @include md {
+          width: 500px;
+        }
+    
+        @include lg {
+          width: 540px;
+        }
+    
+        @include xxl {
+          width: 570px;
+        }
+    
+    
+        &:focus {
+          outline: none;
+        //   border: 2px solid $gray-500;
+        }
+      }
+    }
+    
+}

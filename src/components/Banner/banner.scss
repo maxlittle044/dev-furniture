@@ -1,0 +1,146 @@
+@import "../../sass/breakpoints";
+@import "../../sass/variables";
+
+.block-hero {
+    padding: 50px 0;
+
+    @include lg {
+        padding: 100px 0;
+    }
+
+    &__content {
+        max-width: 784px;
+        margin: 0 auto;
+        text-align: center;
+        margin-bottom: 30px;
+
+        @include md {
+            margin-bottom: 48px;
+        }
+
+        @include lg {
+            margin-bottom: 64px;
+        }
+
+        @include xl {
+            margin-bottom: 80px;
+        }
+
+        @include xxl {
+            margin-bottom: 92px;
+        }
+
+        .block-title {
+            margin-bottom: 20px;
+
+            @include lg {
+                margin-bottom: 30px;
+            }
+
+            h1 {
+                position: relative;
+                display: inline;
+
+                &::before {
+                    content: '';
+                    position: absolute;
+                    bottom: 12px;
+                    right: -24px;
+                    height: 24px;
+                    width: 24px;
+                    background: url('../../images/stars-plus-wink.svg') no-repeat;
+                    background-size: cover;
+
+                    @include sm {
+                        right: -30px;
+                        width: 30px;
+                        height: 30px;
+                        bottom: 6px;
+                    }
+
+                    @include md {
+                        width: 36px;
+                        height: 36px;
+                        right: -36px;
+                        bottom: 18px;
+                    }
+
+                    @include lg {
+                        width: 44px;
+                        height: 44px;
+                        right: -44px;
+                        bottom: 32px;
+                    }
+
+                    @include xl {
+                        width: 51px;
+                        height: 51px;
+                        right: -50px;
+                        bottom: 36px;
+                    }
+                }
+            }
+        }
+    }
+
+    &__img {
+        img {
+            min-height: 160px;
+        }
+    }
+
+    &__media {
+        position: relative;
+
+        .search-box {
+            padding: 8px;
+            position: relative;
+            margin-bottom: 30px;
+            padding-left: 14px;
+            background-color: $white;
+            box-shadow: 0 4px 80px 0 rgba(175, 173, 181, 0.2);
+
+            @include lg {
+                padding: 15px;
+                padding-left: 24px;
+                margin-bottom: 0;
+                position: absolute;
+                top: -40px;
+                left: 50%;
+                transform: translateX(-50%);
+                min-height: 80px;
+                display: flex;
+                align-items: center;
+
+                input {
+                    width: 600px;
+                }
+            }
+
+            input {
+                color: $dark-gray;
+
+                &::placeholder {
+                    color: inherit;
+                }
+            }
+
+            .btn {
+                min-width: 110px;
+                font-weight: 700;
+
+                @include sm {
+                    min-width: 140px;
+                }
+
+                @include md {
+                    min-width: 160px;
+                }
+
+                @include lg {
+                    min-width: 180px;
+                }
+            }
+        }
+    }
+}

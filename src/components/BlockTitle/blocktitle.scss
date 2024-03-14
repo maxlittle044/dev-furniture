@@ -1,0 +1,17 @@
+@import "../../sass/breakpoints";
+@import "../../sass/variables";
+
+.startTitle{
+    width: 427px;
+    p{
+        color: $secondary;
+    }
+}
+
+.centerTitle{
+    max-width: 440px;
+    p{
+        text-align: center;
+        color: $secondary;
+    }
+}

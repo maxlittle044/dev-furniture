@@ -1,0 +1,119 @@
+body {
+  font-family: $font-family-base;
+  font-weight: $font-normal;
+  color: $body-color;
+  font-size: 16px;
+  line-height: 24px;
+
+  @include lg {
+    font-size: $font-base-size;
+    line-height: $font-base-line-height;
+  }
+
+  &.no-scroll {
+    overflow-y: hidden;
+  }
+}
+
+.pro-regular {
+  font-weight: $font-regular;
+}
+
+strong,
+.strong,
+.bold {
+  font-weight: $font-bold;
+}
+
+.italics,
+.italic {
+  font-style: italic;
+}
+
+.upper,
+.uppercase {
+  text-transform: uppercase;
+}
+
+sup {
+  vertical-align: super;
+  font-size: 0.65em;
+  line-height: 0;
+  color: inherit;
+}
+
+sub {
+  vertical-align: sub;
+  font-size: 0.65em;
+  line-height: 0;
+  color: inherit;
+}
+
+img {
+  max-width: 100%;
+}
+
+p {
+  margin-bottom: 1rem;
+
+  &:last-of-type {
+    margin-bottom: 0;
+  }
+}
+
+
+h1,
+.h1 {
+  font-weight: $font-bold;
+  font-size: 26px;
+  line-height: 33.8px;
+  color: $black;
+
+  @include md {
+    font-size: 38px;
+    line-height: 60px;
+  }
+
+  @include lg {
+    font-size: 54px;
+    line-height: 73px;
+  }
+
+  @include xl {
+    font-size: 64px;
+    line-height: 83.2px;
+  }
+
+}
+
+h2,
+.h2 {
+  font-weight: $font-bold;
+  font-size: 24px;
+  line-height: 31.2px;
+  color: $black;
+
+  @include lg {
+    font-size: 34px;
+    line-height: 40px;
+  }
+
+  @include xl {
+    font-size: 44px;
+    line-height: 57.2px;
+  }
+
+}
+
+h3,
+.h3 {
+  font-size: 16px;
+  line-height: 20.8px;
+  font-weight: $font-bold;
+  color: $black;
+
+  @include lg {
+    font-size: 24px;
+    line-height: 31.2px;
+  }
+}

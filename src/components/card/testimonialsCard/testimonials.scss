@@ -1,0 +1,38 @@
+.card-testimonial{
+    width: 545px;
+    border: 1px solid;
+    padding: 26px 24px;
+    background-attachment: #FFFFFF;
+    
+
+    &__content{
+        display: flex;
+        flex-direction: column;
+        gap: 26px;
+    }
+
+    &__personaldetails{
+        display: flex;
+        justify-content: space-between;
+
+        .name{
+            display: flex;
+            align-items: end;
+            color: black;
+            .h3{
+                line-height: 26px !important;
+                font-size: 20px !important;
+            }
+        }
+        .rating{
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        .h3{
+            line-height: 24px !important;
+            font-size: 18px !important;
+        }
+    }
+
+}

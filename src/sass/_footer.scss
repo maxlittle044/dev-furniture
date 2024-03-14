@@ -1,0 +1,136 @@
+.site-footer {
+
+    &__wrapper {
+        padding-top: 20px;
+        padding-bottom: 24px;
+        border-top: 1.5px solid $light-grayish-orange;
+
+        @include lg {
+            padding-bottom: 88px;
+            padding-top: 80px;
+        }
+    }
+
+    &__logo {
+        margin-bottom: 20px;
+
+        @include lg {
+            margin-bottom: 36px;
+        }
+
+        a {
+            display: inline-block;
+        }
+    }
+
+    &__description {
+        color: $dark-black;
+        font-weight: 500;
+    }
+
+    &__nav {
+        display: flex;
+        margin-top: 30px;
+        justify-content: space-between;
+
+        @include lg {
+            justify-content: flex-end;
+        }
+
+        &Item {
+
+            @include mdDown {
+                flex: 0 0 33.333333%;
+                max-width: 33.333333%;
+            }
+
+            &:not(:last-child) {
+
+                @include lg {
+                    margin-right: 64px;
+                }
+
+                @include xl {
+                    margin-right: 80px;
+                }
+
+                @include xxl {
+                    margin-right: 96px;
+                }
+            }
+
+            h4 {
+                font-size: 16px;
+                font-weight: 700;
+                line-height: 20px;
+                color: $dark-black;
+                margin-bottom: 16px;
+
+                @include sm {
+                    font-size: 18px;
+                    line-height: 24px;
+                    margin-bottom: 18px;
+                }
+
+                @include lg {
+                    font-size: 20px;
+                    line-height: 26px;
+                    margin-bottom: 20px;
+                }
+
+                a {
+                    color: inherit;
+                    transition: all .3s;
+                    text-decoration: none;
+
+                    &:hover {
+                        color: $secondary;
+                    }
+                }
+            }
+
+            ul {
+                li {
+                    &:not(:last-child) {
+                        margin-bottom: 6px;
+
+                        @include sm {
+                            margin-bottom: 10px;
+                        }
+
+                        @include lg {
+                            margin-bottom: 12px;
+                        }
+                    }
+
+                    a {
+                        font-size: 14px;
+                        line-height: 26px;
+                        font-weight: 500;
+                        color: $dark-gray;
+                        transition: all .3s;
+                        text-decoration: none;
+
+                        @include sm {
+                            font-size: 16px;
+                        }
+
+                        @include lg {
+                            color: $dark-black;
+                            font-size: 18px;
+                            line-height: 32px;
+                        }
+
+                        &:hover {
+                            color: $dark-black;
+
+                            @include lg {
+                                color: $secondary;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

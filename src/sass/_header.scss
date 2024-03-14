@@ -1,0 +1,82 @@
+.site-header {
+  padding: 20px 0;
+  border-bottom: 2px solid $light-gray-100;
+
+  @include md {
+    padding: 26px 0;
+  }
+
+  @include lg {
+    padding: 32px 0;
+  }
+
+  @include xl {
+    padding: 43px 0 35px 0;
+  }
+
+  &__logo {
+    a {
+      display: inline-block;
+    }
+  }
+
+  .navbar {
+    &-container {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+  }
+
+  .nav {
+    &-content {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      li {
+        @include lg {
+          margin-right: 40px;
+
+          &:last-child {
+            margin-right: 0;
+          }
+        }
+
+        @include xl {
+          margin-right: 48px;
+        }
+
+        @include xxl {
+          margin-right: 60px;
+        }
+
+        a {
+          font-size: 18px;
+          font-weight: 500;
+          line-height: 32px;
+          color: $dark-black;
+          transition: all .3s;
+
+          &:hover {
+            color: $secondary;
+          }
+        }
+      }
+    }
+
+    &-profile {
+      display: none;
+
+      @include lg {
+        width: 100%;
+        display: flex;
+        max-width: 84px;
+        justify-content: space-between;
+      }
+    }
+  }
+}
