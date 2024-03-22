@@ -1,0 +1,84 @@
+@import "../../../sass/breakpoints";
+@import "../../../sass/variables";
+
+.card-services {
+    padding: 16px;
+    margin-bottom: 20px;
+    transition: all .3s;
+    background-color: $white;
+    box-shadow: 0 4px 100px 0 rgba(175, 173, 181, 0.1);
+    box-shadow: 0px 3px 36px rgba(0,0,0,0.06);
+
+    @include sm {
+        padding: 20px 18px;
+    }
+
+    @include lg {
+        margin-bottom: 0;
+        padding: 26px 24px;
+    }
+
+    &.mb-0 {
+        margin-bottom: 0;
+    }
+
+    &__icon {
+        width: 44px;
+        height: 44px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: $gray-300;
+        border-radius: 50%;
+        margin-bottom: 16px;
+
+        @include sm {
+            width: 50px;
+            height: 50px;
+            margin-bottom: 20px;
+        }
+
+        @include lg {
+            width: 62px;
+            height: 62px;
+            margin-bottom: 24px;
+        }
+    }
+
+    &__info {
+        @include xsDown {
+            font-size: 14px;
+        }
+
+        h3 {
+            margin-bottom: 12px;
+
+            @include sm {
+                margin-bottom: 16px;
+            }
+
+            @include lg {
+                margin-bottom: 20px;
+            }
+        }
+
+        p {
+            font-weight: 500;
+        }
+    }
+
+    &:hover {
+        color: $white;
+        background-color: $tertiary;
+
+        .card-services__icon {
+            background-color: $white;
+        }
+
+        .card-services__info {
+            h3 {
+                color: $white;
+            }
+        }
+    }
+}

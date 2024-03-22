@@ -1,0 +1,151 @@
+@import "../../../sass/breakpoints";
+@import "../../../sass/variables";
+
+.card-overlay {
+    z-index: 0;
+    color: $white;
+    display: flex;
+    overflow: hidden;
+    position: relative;
+    flex-direction: column;
+    transition: all .3s;
+
+    &::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        background: linear-gradient(0deg, rgba(21, 20, 17, .1) 0%, rgba(21, 20, 17, .1) 100%);
+    }
+
+    &__media {
+        img {
+            width: 100%;
+        }
+    }
+
+    &__content {
+        position: absolute;
+        bottom: 0;
+        padding: 18px 14px;
+        font-weight: 500;
+        color: rgba($white, 0.7);
+
+        @include sm {
+            padding: 20px 16px;
+        }
+
+        @include xl {
+            padding: 24px 20px;
+        }
+
+        .title {
+            color: $white;
+            font-size: 20px;
+            line-height: 26px;
+            margin-bottom: 6px;
+            letter-spacing: 1px;
+
+            @include sm {
+                font-size: 24px;
+                line-height: 30px;
+            }
+
+            @include lg {
+                font-size: 26px;
+                line-height: 34px;
+            }
+
+            .sub-title {
+                display: block;
+                font-size: 16px;
+                font-weight: 500;
+                line-height: 20px;
+                margin-bottom: 6px;
+                letter-spacing: 1px;
+                color: rgba($white, 0.7);
+
+                @include sm {
+                    margin-bottom: 8px;
+                }
+
+                @include lg {
+                    font-size: 18px;
+                    line-height: 32px;
+                    margin-bottom: 10px;
+                }
+            }
+        }
+    }
+
+    &__link {
+        padding-top: 12px;
+
+        @include lg {
+            padding-top: 14px;
+        }
+
+        a {
+            color: $white;
+            text-decoration: none;
+            position: relative;
+            padding-bottom: 2px;
+            transition: all .3s;
+
+            &::before {
+                content: '';
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                height: 1px;
+                width: 0;
+                opacity: 0;
+                visibility: hidden;
+                background: $white;
+                transition: all .3s;
+            }
+        }
+    }
+
+    .stretched-link {
+        &::after {
+            content: "";
+            position: absolute;
+            top: -9999px;
+            right: -9999px;
+            bottom: -9999px;
+            left: -9999px;
+            z-index: 1;
+            pointer-events: auto;
+            background-color: rgba(0, 0, 0, 0);
+        }
+    }
+
+    &:hover {
+        color: $secondary;
+
+        .card-overlay__content {
+            color: $secondary;
+
+            .title,
+            .sub-title {
+                color: $secondary;
+            }
+
+            .card-overlay__link {
+                a {
+                    color: $secondary;
+
+                    &::before {
+                        width: 100%;
+                        opacity: 1;
+                        visibility: visible;
+                        background: $secondary;
+                    }
+                }
+            }
+        }
+    }
+}

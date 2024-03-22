@@ -1,0 +1,145 @@
+@import "../../sass/breakpoints";
+@import "../../sass/variables";
+
+.block-banner {
+  margin-bottom: 100px;
+
+  @include md {
+    margin-bottom: 130px;
+  }
+
+  @include lg {
+    margin-bottom: 150px;
+  }
+
+  @include xl {
+    margin-bottom: 180px;
+  }
+
+  .banner-image {
+    &__slider {
+      position: relative;
+    }
+
+    &__article {
+      max-width: 340px;
+      background-color: $white;
+      position: absolute;
+      bottom: -100px;
+      left: 60px;
+      padding: 11px 12px;
+
+      @include md {
+        max-width: 500px;
+        padding: 20px 20px;
+        bottom: -85px;
+        left: 75px;
+      }
+
+      @include lg {
+        max-width: 780px;
+        padding: 30px 30px;
+        bottom: -70px;
+        left: 60px;
+      }
+
+      @include xl {
+        max-width: 1080px;
+        padding: 47px 40px;
+        bottom: -70px;
+        left: 100px;
+      }
+
+      .article-writer {
+        display: flex;
+        align-items: center;
+        justify-content: start;
+      }
+    }
+  }
+}
+
+.block-news {
+  margin-bottom: 100px;
+
+  @include md {
+    margin-bottom: 130px;
+  }
+
+  @include lg {
+    margin-bottom: 160px;
+  }
+
+  @include xl {
+    margin-bottom: 180px;
+  }
+
+  .news-content {
+    .startTitle{
+      padding-bottom: 30px;
+    }
+    .link-wrapper {
+      text-decoration: none;
+      color: inherit;
+    }
+    &__headlines {
+      img {
+        margin-bottom: 18px;
+      }
+
+      .headline-title {
+        color: $black;
+        font-weight: bold;
+      }
+
+      .headline-writer {
+        &__name {
+          color: $black;
+          font-weight: bold;
+          margin-right: 15px;
+
+          @include lg {
+            margin-right: 18px;
+          }
+
+          @include xl {
+            margin-right: 24px;
+          }
+        }
+      }
+    }
+  }
+}
+
+.block-trendingTopics {
+  .trendingTopics-content {
+    &__filter {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      .filter-item {
+        display: flex;
+
+        li {
+          margin-right: 35px;
+        }
+      }
+
+      .btn-filter {
+        display: flex;
+        align-items: center;
+        padding: 12px 20px;
+        border: 1px solid #F3F3F3;
+      }
+    }
+
+    .btn-loadmore {
+      max-width: 750px;
+      margin-left: auto;
+      margin-right: auto;
+      text-align: center;
+      margin-bottom: 50px;
+    }
+  }
+}

@@ -1,0 +1,14 @@
+@import "../../../sass/breakpoints";
+@import "../../../sass/variables";
+
+.block-member {
+  margin-bottom: 20px;
+  @include lg {
+    margin-bottom: 30px;
+  }
+
+  &__name {
+    color: $black;
+    margin-bottom: 0;
+  }
+}

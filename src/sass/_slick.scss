@@ -1,0 +1,9 @@
+.slick {
+    &-slide {
+        padding: 0 10px;
+
+        @include lg {
+            padding: 0 15px;
+        }
+    }
+}

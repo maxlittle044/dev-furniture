@@ -1,0 +1,80 @@
+@import "../../sass/breakpoints";
+@import "../../sass/variables";
+
+.block-productdetails {
+  margin-bottom: 100px;
+  @include lg {
+    margin-bottom: 50px;
+  }
+  .productdetails-content {
+    margin-top: 100px;
+    .subtitle {
+      margin-top: 4px;
+      margin-bottom: 20px;
+      @include lg {
+        margin-top: 10px;
+        margin-bottom: 30px;
+      }
+    }
+    &__media {
+      width: 100%;
+      img {
+        width: 100%;
+        object-fit: cover;
+        height: 600px;
+      }
+    }
+    &__content {
+      padding: 32px 0px;
+      .colors {
+        p {
+          color: $black;
+          font-weight: 700;
+          margin-bottom: 6px;
+          @include lg {
+            margin-bottom: 20px;
+          }
+        }
+        &__options {
+          display: flex;
+          margin-bottom: 20px;
+
+          li {
+            height: 50px;
+            width: 50px;
+          }
+        }
+      }
+      .product-price {
+        margin-top: 20px;
+        margin-bottom: 30px;
+        @include lg {
+          margin-top: 30px;
+          margin-bottom: 50px;
+        }
+      }
+
+      .btn-buy {
+        .btn-primary {
+          min-width: 250px;
+          margin-right: 20px;
+        }
+        .btn-secondary {
+          min-width: 250px;
+        }
+      }
+    }
+  }
+}
+
+.block-relateditems {
+  margin-bottom: 83px;
+  @include lg {
+    margin-bottom: 100px;
+  }
+  .relateditems-content {
+    h3 {
+      margin-bottom: 30px;
+    }
+  }
+}

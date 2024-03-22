@@ -1,0 +1,137 @@
+@import "../../../sass/breakpoints";
+@import "../../../sass/variables";
+
+.card-testimonial {
+    background-color: $white;
+    padding: 18px 16px 16px;
+    transition: all .3s;
+    box-shadow: 0px 4px 100px 0px rgba(175, 173, 181, 0.15);
+
+    @include lg {
+        padding: 24px;
+    }
+
+    &__quote {
+        margin-bottom: 18px;
+
+        @include lg {
+            margin-bottom: 26px;
+        }
+
+        .show-desktop,
+        .show-mobile {
+            line-height: 0;
+        }
+    }
+
+    &__content {
+        font-weight: 500;
+        margin-bottom: 18px;
+
+        @include lg {
+            margin-bottom: 26px;
+        }
+    }
+
+    &__author {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        .avatar {
+            display: flex;
+            align-items: center;
+
+            img {
+                max-width: 30px;
+
+                @include sm {
+                    max-width: 40px;
+                }
+
+                @include lg {
+                    max-width: 50px;
+                }
+            }
+
+            .author-info {
+                margin-left: 16px;
+
+                @include sm {
+                    margin-left: 14px;
+                }
+
+                h3 {
+                    font-size: 14px;
+                    margin-bottom: 0;
+                    line-height: 18px;
+                    color: $dark-black;
+
+                    @include sm {
+                        font-size: 16px;
+                        line-height: 22px;
+                    }
+
+                    @include lg {
+                        font-size: 20px;
+                        line-height: 26px;
+                    }
+                }
+            }
+        }
+
+        .rating {
+            display: flex;
+            width: 100%;
+            max-width: 60px;
+            align-items: center;
+            justify-content: space-between;
+
+            @include lg {
+                max-width: 64px;
+            }
+
+            h3 {
+                font-size: 14px;
+                margin-bottom: 0;
+                line-height: 18px;
+                color: $dark-black;
+
+                @include sm {
+                    font-size: 16px;
+                    line-height: 20px;
+                }
+
+                @include lg {
+                    font-size: 18px;
+                    line-height: 24px;
+                }
+            }
+        }
+    }
+
+    &:hover {
+        background-color: $secondary;
+
+        .card-testimonial__content,
+        .card-testimonial__author {
+            color: $white;
+        }
+
+        .card-testimonial__author {
+            h3 {
+                color: $white;
+            }
+        }
+
+        .card-testimonial__quote,
+        .card-testimonial__author {
+            svg {
+                path {
+                    fill: $white;
+                    stroke: $white;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,91 @@
+@import "../sass/breakpoints";
+@import "../sass//variables";
+
+.about-page {
+  .block-banner {
+    margin-bottom: 100px;
+    @include md {
+      margin-bottom: 120px;
+    }
+    @include lg {
+      margin-bottom: 150px;
+    }
+    @include xl {
+      margin-bottom: 180px;
+    }
+    .banner-content {
+      h1 {
+        max-width: 285px;
+        margin-left: auto;
+        margin-right: auto;
+        text-align: center;
+        margin-bottom: 20px;
+      }
+      .sub-head {
+        max-width: 600px;
+        margin-left: auto;
+        margin-right: auto;
+        text-align: center;
+        margin-bottom: 30px;
+        @include md {
+          margin-bottom: 35px;
+        }
+        @include lg {
+          margin-bottom: 40px;
+        }
+        @include xl {
+          margin-bottom: 50px;
+        }
+      }
+    }
+  }
+
+  .block-mission {
+    margin-bottom: 100px;
+    @include md{
+        margin-bottom: 120px;
+    }
+    @include lg{
+        margin-bottom: 150px;
+    }
+    @include xl{
+        margin-bottom: 180px;
+    }
+    .mission-content {
+      .work-experience {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-top: 30px;
+
+        @include md {
+          margin-top: 50px;
+        }
+      }
+    }
+  }
+
+  .block-team {
+    .team-content {
+      .sub-head {
+        margin-top: 20px;
+        @include lg {
+          margin-top: 46px;
+        }
+      }
+
+      &__members{
+        margin-top: 30px;
+        @include md{
+            margin-top: 40px;
+        }
+        @include lg{
+            margin-top: 50px;
+        }
+        @include xl{
+            margin-top: 60px;
+        }
+      }
+    }
+  }
+}

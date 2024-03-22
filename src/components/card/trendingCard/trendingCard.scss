@@ -1,0 +1,62 @@
+@import "../../../sass/breakpoints";
+@import "../../../sass/variables";
+
+.card-trending{
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    @include lg{
+        margin-bottom: 30px;
+    }
+    &__media {
+        // width: 100%;
+        margin-right: 20px;
+    
+        img {
+          width: 100%;
+          object-fit: cover;
+          height: auto;
+    
+          @include md {
+            // height: 140px;
+          height: auto;
+
+          }
+    
+          @include lg {
+            // height: 180px;
+          height: auto;
+
+          }
+    
+          @include xl {
+            // height: 210px;
+          height: auto;
+
+          }
+        }
+      }
+
+      &__content{
+        .sub-title{
+          display: none;
+          @include md{
+            display: inline;
+          }
+        }
+
+        .writer-details{
+            &__name{
+                font-weight: 700;
+                color: $black;
+                margin-right: 20px;
+            }
+            &__date{
+              display: none;
+              @include md{
+                display: inline;
+              }
+            }
+        }
+      }
+}
